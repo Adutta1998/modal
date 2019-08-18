@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="modal.css">
+    <title>Modal</title>
+</head>
+<body>
+    <button class="modal-trigger" data-target="modal1">Open Modal1</button>
+    <button class="modal-trigger" data-target="modal2">Open Modal2</button>
+    
+    <div class="modal" id="modal1">
+        <div class="mbody">
+            <p class="title">Hello1</p>
+            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, voluptatem dicta minima reiciendis quaerat laudantium distinctio mollitia atque amet velit laborum repudiandae deleniti consequuntur beatae obcaecati, ipsum tempora rerum ratione!
+            Quasi eos nobis voluptatem, doloremque asperiores expedita eius architecto aut cupiditate aliquid illum temporibus error consectetur? Accusamus voluptatibus omnis hic fugit voluptatum vitae, dignissimos explicabo impedit aperiam doloremque quis nisi.</p>
+        </div>
+    </div>
+    <div class="modal" id="modal2">
+        <div class="mbody">
+            <p class="title">Hello2</p>
+            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, voluptatem dicta minima reiciendis quaerat laudantium distinctio mollitia atque amet velit laborum repudiandae deleniti consequuntur beatae obcaecati, ipsum tempora rerum ratione!
+            Quasi eos nobis voluptatem, doloremque asperiores expedita eius architecto aut cupiditate aliquid illum temporibus error consectetur? Accusamus voluptatibus omnis hic fugit voluptatum vitae, dignissimos explicabo impedit aperiam doloremque quis nisi.</p>
+        </div>
+    </div>
+</body>
+<script src="./Modal.js"></script>
+<script>
+    var modal = new Modal();
+
+    var l = `
+    <input type="text" onchange='alert(this.value)'>enter a number
+    `
+
+    var options = {
+        title:"New Title",
+        html:`<h2>This is the Updated Content</h2><br>${l}`,
+        size:{
+            x:1000,
+            y:300
+        },
+        bgcolor:"rgb(255,255,0)"
+    }
+
+    modal.content(1,options);
+    // modal.init();
+</script>
+</html>
