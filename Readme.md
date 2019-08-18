@@ -3,11 +3,11 @@
 steps for creating a modal
 
 1. link up the css file with your project
-```
+```html
 <link rel="stylesheet" href="main.css"> 
 ```
 2. add javascript source to your project
-```
+```html
 <script src="./Modal.js"></script>
 ```
 3. create a division with modal trigger and modal body
