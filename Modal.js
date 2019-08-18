@@ -6,7 +6,9 @@ function Modal() {
     }
     Modal.prototype.closeModal = function(id,params){
         var modal = document.querySelector('#'+id);
-        if(params.path[0] == modal){
+        console.log(params);
+        
+        if(params.srcElement == modal){
             modal.classList.remove('active');
         }
     }
